@@ -5,11 +5,10 @@ import {
   Instrument_Serif,
 } from "next/font/google";
 
+import { appName, appUrl } from "@/lib/app";
 import { cn } from "@/lib/utils";
 
 import "./globals.css";
-
-const appName = process.env.NEXT_PUBLIC_APP_NAME ?? "My POS App";
 
 const bricolageGrotesque = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -33,12 +32,10 @@ const instrumentSerif = Instrument_Serif({
 export const metadata: Metadata = {
   title: {
     template: `%s - ${appName}`,
-    default: `${appName}`,
+    default: appName,
   },
   description: `${appName} is the all-in-one POS app designed to simplify checkout, track inventory, and help small businesses sell anywhere. Try it free today.`,
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000",
-  ),
+  metadataBase: new URL(appUrl),
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -52,7 +49,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         instrumentSerif.variable,
       )}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">{children}</body>
     </html>
   );
 }
