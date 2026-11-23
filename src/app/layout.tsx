@@ -5,6 +5,7 @@ import {
   Instrument_Serif,
 } from "next/font/google";
 
+import { Toaster } from "@/components/ui/toast";
 import { appName, appUrl } from "@/lib/app";
 import { cn } from "@/lib/utils";
 
@@ -49,7 +50,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         instrumentSerif.variable,
       )}
     >
-      <body className="flex min-h-full flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">
+        {children}
+
+        <Toaster />
+      </body>
     </html>
   );
 }
