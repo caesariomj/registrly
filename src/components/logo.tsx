@@ -9,7 +9,7 @@ export function Logo({ className, ...props }: LogoProps) {
   return (
     <span
       className={cn(
-        "text-foreground inline-flex shrink-0 items-center gap-2 text-xl font-bold tracking-tighter whitespace-nowrap",
+        "text-foreground inline-flex shrink-0 items-center gap-2 text-xl font-bold tracking-tighter whitespace-nowrap md:text-lg",
         className,
       )}
       {...props}
