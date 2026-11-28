@@ -8,7 +8,7 @@ function Input({ className, type, ...props }: React.ComponentProps<"input">) {
       type={type}
       data-slot="input"
       className={cn(
-        "border-b-foreground/50 bg-background hover:border-b-foreground file:text-foreground placeholder:text-muted-foreground focus-visible:border-b-primary aria-invalid:text-destructive aria-invalid:focus-within:text-foreground aria-invalid:border-b-destructive/50 aria-invalid:hover:border-b-destructive dark:aria-invalid:border-b-destructive/50 h-8 w-full min-w-0 rounded-2xl border-b py-1 text-base transition-[border-color] duration-150 ease-out outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+        "border-b-foreground/50 bg-background hover:border-b-foreground file:text-foreground placeholder:text-muted-foreground focus-visible:border-b-primary aria-invalid:bg-destructive/10 aria-invalid:text-destructive aria-invalid:focus-within:text-foreground aria-invalid:border-b-destructive/50 aria-invalid:hover:border-b-destructive dark:aria-invalid:border-b-destructive/50 h-8 w-full min-w-0 rounded-2xl border-b py-1 text-base transition-[border-color] duration-150 ease-out outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
         className,
       )}
       {...props}
