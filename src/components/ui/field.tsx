@@ -4,7 +4,7 @@ import { useMemo } from "react";
 
 import { type VariantProps, cva } from "class-variance-authority";
 import { cn } from "cn";
-import { CircleAlert } from "lucide-react";
+import { SquareExclamationPoint } from "lucide-react";
 
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
@@ -219,13 +219,13 @@ function FieldError({
       role="alert"
       data-slot="field-error"
       className={cn(
-        "text-destructive font-utility flex items-center gap-2 text-sm font-normal tracking-tighter",
+        "text-destructive flex items-center gap-2 font-sans text-sm font-medium tracking-tighter",
         className,
       )}
       {...props}
     >
-      <CircleAlert
-        className="fill-destructive text-background mt-0.5 size-5 shrink-0"
+      <SquareExclamationPoint
+        className="fill-destructive text-background mt-0.5 size-6 shrink-0"
         aria-hidden="true"
       />
       <div>{content}</div>
